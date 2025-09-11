@@ -462,9 +462,9 @@ int contexto() {
     		// Cenário
     		if (continuar(cenario) == 1) {
     			char * sobre = "\t #História: \n\n"
-							   "\t Aphelios, um caçador aclamado que desfrutou de sucesso na cidade de Targus, \n"
-							   "\t conheceu Liora e sua paixão por ela cresceu ao longo de uma década. \n"
-							   "\t Durante esse tempo, ele renunciou a sua carreira em prol de uma vida campestre \n"
+							   "\t Arthit, um jovem de 20 anos nascido e criado na cidade de Aeropersus \n"
+							   "\t que tentava se reerguer da explosão 14, a última bomba jogada por uma nação soberana em guerra \n"
+							   "\t teve seus pais mortos pela explosão então desde adoslecente tem sobrevivido na oficina \n"
 							   "\t tranquila ao lado dela no Reino de Iônia, afastando-se dos perigos do mundo exterior. \n"
 							   "\t No entanto, conforme a história se desenrola, Aphelios, insatisfeito com a rotina \n"
 							   "\t monótona, é arrastado para uma situação dramática com um mago chamado Veigar, \n"
@@ -476,16 +476,16 @@ int contexto() {
     			// História
     			if (continuar(sobre) == 1) {
     				char* objetivos = "\t #Objetivos: \n\n"
-									  "\t - Recuperar seu status de caçador, proteger Iônia e proteger Liora dos perigos que se aproximam. \n\n"
-									  "\t - Descobrir a verdade sobre Veigar e seus planos sombrios. \n\n"
-									  "\t - Unir forças com Jax e outros aliados para enfrentar ameaças mágicas.\n\n";
+									  "\t - Invadir a base do general Berkesus. \n\n"
+									  "\t - Derrotar qualquer tipo de obstáculo pela frente. \n\n"
+									  "\t - Destruir o elemento Oganus.\n\n";
 							
 					// Objetivos		  
 					if (continuar(objetivos) == 1) {
 						char* escolhas = "\t #Escolhas \n\n"
-										 "\t Arthit e Riko são dois jovens em um mundo.\n"
-						 				 "\t Será um desafio equilibrar o amor por Liora e o dever de proteger o reino. \n"
-										 "\t Sua jornada irá misturar romance, mistério e ação em um épico de proporções mágicas.";
+										 "\t Arthit e Riko são dois jovens em um mundo pós apocalíptico.\n"
+						 				 "\t Suas escolhas são focadas em estratégia e sobrevivência. \n"
+										 "\t Uma aventura perigosa os espera com a missão de salvar o mundo de mais uma guerra.";
 						
 						// Escolhas
 						if (continuar(escolhas) == 1) {
