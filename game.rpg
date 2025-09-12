@@ -444,20 +444,24 @@ int contexto() {
     // Descrição
     if (continuar(descricao) == 1) {
     	char* personagens = "\t #Personagens: \n\n"
-							"\t - Aphelios (Classe: Caçador): O herói principal da narrativa, um caçador \n"
-							"\t de habilidades notáveis que almeja uma vida tranquila com Liora. \n"
-							"\t - Liora (Classe: Guerreira, camponesa, esposa de Aphelios): O interesse \n"
-							"\t amoroso de Aphelios, uma bela donzela que desempenha um papel central em sua jornada. \n"
-							"\t - Veigar (Classe: Mago): Um personagem misterioso cujos segredos detêm \n"
-							"\t uma influência significativa no destino de Iônia e seu mundo alternativo. \n"
-							"\t - Jax (Classe: Caçador, Amigo de Aphelios): Um leal amigo \n"
-							"\t de longa data conhecido por suas habilidades em combate.";
+							"\t #Arhit: Um jovem de 20 anos foi criado por engenheiros cibernéticos usando sua arma \n"
+							"\t a lâmina estática que pode ceifar qualquer coisa e abrir cortes no espaço tempo \n"
+							"\t mas apenas quando se é necessário, considerado o heroí da narrativa. \n"
+							"\t #Riko: Uma jovem de 19 anos, filha de um renomado alquimista que fazia armas para uma \n"
+							"\t nação já não existente, é parceira de Arthit. Possui habilidades com armas de \n"
+							"\t de pulso forte e tiro a alvo com precisão perfeita distancia, seu pai foi morto pelo \n"
+							"\t general Berkesus então ela se junta com Arthit em busca de vingança. \n"
+							"\t #General Berkesus: Foi um comandante de uma nação fascista e uma das principais \n"
+                            "\t causadoras das guerras que destruíram a terra, se ergueu com um dos poucos que \n"
+                            "\t restaram de seu exército com o mesmo propósito de antes, tornar ditador \n"
+                            "\t do mundo e dominar todas as nações.";
 							
  		// Personagens
     	if (continuar(personagens) == 1) {
     		char* cenario = "\t #Cenário: \n\n"
-							"\t O jogo se desenrola em meio às paisagens exuberantes do Reino de Iônia, \n"
-							"\t bem como em um mundo alternativo dele repleto de mistérios e magia.";
+							"\t Ambientado em um futuro cyberpunk distópico com prédios abandonados e a maioria deles detonados \n"
+							"\t com o chão seco e pouco resquícios de natureza própria entre os escombros onde a sociedade tenta \n"
+                            "\t se reerguer como uma nação subdesenvolvida.";
     		
     		// Cenário
     		if (continuar(cenario) == 1) {
@@ -465,13 +469,16 @@ int contexto() {
 							   "\t Arthit, um jovem de 20 anos nascido e criado na cidade de Aeropersus \n"
 							   "\t que tentava se reerguer da explosão 14, a última bomba jogada por uma nação soberana em guerra \n"
 							   "\t teve seus pais mortos pela explosão então desde adoslecente tem sobrevivido na oficina \n"
-							   "\t tranquila ao lado dela no Reino de Iônia, afastando-se dos perigos do mundo exterior. \n"
-							   "\t No entanto, conforme a história se desenrola, Aphelios, insatisfeito com a rotina \n"
-							   "\t monótona, é arrastado para uma situação dramática com um mago chamado Veigar, \n"
-							   "\t que mudará o curso de sua vida e o destino de Iônia. Esta narrativa explora \n"
-							   "\t o desenvolvimento da história de Aphelios em meio a um mundo alternativo, \n"
-							   "\t que o fará redescobrir sua coragem em um mundo repleto de segredos, \n"
-							   "\t desafios e forças sombrias que ameaçavam o Reino e seu eterno amor por Liora.";
+							   "\t de seus pais que eram engenheiros cibernéticos construindo e consertando robôs ou maquínas \n"
+							   "\t para pessoas necessitadas de tecnologia local, no entanto, também costuma lutar em disputas \n"
+							   "\t clandestinas com uma lâmina estática a última invenção de seu pai capaz de cortar inimigos \n"
+							   "\t em um só corte e ainda tem a possibilidade de fazer portais temporais, mas nunca demonstrado \n"
+							   "\t por Arthit que ainda não tentou esse feito enquanto Riko uma jovem peregrina de 19 anos estava \n"
+							   "\t em mais uma de suas viagens pela cidade, conheceu Arthit ficando impressionada com as invençôes \n"
+							   "\t do rapaz, mas, ao mesmo tempo, pensou como ele seria muito capaz para a sua missão, invadir \n"
+                               "\t a base do general Berkesus, detonar ou roubar o elemento Oganus o principal elemento usado nas \n"
+                               "\t armas do exército e usado na bomba da explosão 14, por fim acabar de vez com o plano de Berkesus \n"
+                               "\t de dominar o mundo.";
     			
     			// História
     			if (continuar(sobre) == 1) {
