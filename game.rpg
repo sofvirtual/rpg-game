@@ -140,8 +140,8 @@ int fim(char* texto, char* texto_fim, int tipo) {
 	system("cls");
 	
 	char* opcao = "\t\t\t  Deseja jogar novamente? \n"
-		    	  "\t\t -   'C'   jogar novamente \n"
-		    	  "\t\t -   'Q'   para finalizar o jogo... \n\n"
+		    	  "\t\t -   'S'   jogar novamente \n"
+		    	  "\t\t -   'N'   para finalizar o jogo... \n\n"
 		    	  "\t\t Sua Escolha: ";
 		    
 	char escolha;
@@ -155,12 +155,12 @@ int fim(char* texto, char* texto_fim, int tipo) {
     	
         scanf(" %c", &escolha);
 
-        if (escolha == 'C' || escolha == 'c') {
+        if (escolha == 'S' || escolha == 's') {
             // Continuar história
             main();
             break;
             
-        } else if (escolha == 'Q' || escolha == 'q') {
+        } else if (escolha == 'N' || escolha == 'n') {
         	return 0;
             printf("Finalizando o jogo...\n");
             break; // Sai do loop
@@ -174,26 +174,24 @@ int fim(char* texto, char* texto_fim, int tipo) {
 	
 }
 
-void aceitar_pacto() {
+void pedir_carona_com_piloto() {
 	char* texto_base;
 	char* opcoes;
 	char* texto_fim;
 	
-	texto_base = "\t Ao aceitar o Pacto, Aphelios desesperadamente se arrepende de sua escolha. \n"
-				 "\t Veigar, o mago, o joga Aphelios em uma realidade alternativa do Reino, \n"
-				 "\t onde a esposa do Caçador não o conhece! Com isso, o agir de Aphelios \n"
-			 	 "\t é saber rapidamente sobre Liora, onde ele descobre que nesse mundo, \n"
-				 "\t ela é uma guerreira contra o reino de Veigar, dono de um exército \n"
-				 "\t enorme que controla toda a região. Então, ele decide procurá-la.";
+	texto_base = "\t O piloto leva Arthit e Riko ate a base do general Berkesus \n"
+				 "\t mas a uma grande questão de como devem invadir a base, começam a \n"
+				 "\t fazer sua estratégia tendo dúvidas entre três possibilidades.";
+			 	
 				
-	opcoes = "\t\t #O que Aphelios deverá fazer? \n"
-			 "\t 1.	Aphelios deve procurar sozinho Liora. \n"
-			 "\t 2.	Aphelios deve encontrar o exército de Liora e tentar se infiltrar para ajudá-la na guerra. \n"
-			 "\t 3.	Aphelios deve procurar um antigo amigo seu, Jax, para ajudá-lo a achar Liora.";
+	opcoes = "\t\t #Como eles devem invadir? \n"
+			 "\t 1.	Enfrentar os soldados do portão. \n"
+			 "\t 2.	Invadir a base pelos fundos. \n"
+			 "\t 3.	Se infiltrar entre os demais.";
 
 	switch (decisao(texto_base, opcoes)) {
 
-		// Deve procurar sozinho Liora
+		// Enfrentar os soldados do portão
 		case 1:
 			texto_base = "\t Após muita dificuldade, Aphelios encontra Liora e ela é uma \n"
 						 "\t guerreira resistente e líder de um exército contra o Reino.";
