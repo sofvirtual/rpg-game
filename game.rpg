@@ -193,108 +193,110 @@ void pedir_carona_com_piloto() {
 
 		// Enfrentar os soldados do portão
 		case 1:
-			texto_base = "\t Após muita dificuldade, Aphelios encontra Liora e ela é uma \n"
-						 "\t guerreira resistente e líder de um exército contra o Reino.";
+			texto_base = "\t Riko e Arthit enfrentam os soldados do portão mas isso alerta os outros soldados \n"
+						 "\t o que os fazem travar uma batalha com um número maior ficam enfraquecidos \n" 
+                         "\t ao chegar na sala principal terão que fazer uma escolha para executar sua missão.";
+                      
 						
-			opcoes = "\t #Como Aphelios deve agir? \n"
-					 "\t 1.	Lutar ao lado de Liora como um soldado sem ela saber quem ele é. \n"
-					 "\t 2.	Conversar com Liora e tentar fazê-la lembrar deles.";
+			opcoes = "\t #Qual o proximo passo que os dois devem escolher? \n"
+					 "\t 1.Escolher que Arthit usa sua lâmina para destruir o elemento oganus \n"
+                     "\t e Riko tenta matar o General com suas armas \n"
+					 "\t 2.	Escolher que Riko tenta destruir o elemento Oganua \n"
+                     "\t com uma bomba rélogio e Arthit tenta matar o general com sua lâmina.";
 
 			switch (decisao(texto_base, opcoes)) {
 
-				// Lutar ao lado de Liora - FIM
+				// Escolher Arthit para usar a lâmina - FIM
 				case 1:
-					texto_base = "\t Liora aceita Aphelios no seu exército. Liora, uma jovem guerreira que não deixa \n"
-								 "\t seus companheiros de guerra para trás, vê Aphelios em uma situação de perigo, \n" 
-								 "\t onde o Caçador está na mira de Veigar, rapidamente Liora percebe e doa sua vida por Aphelios";
+					texto_base = "\t Arthit destruiu o elemento com a lâmina e Riko conseguiu matar o general com \n"
+								 "\t com um tiro perfeito em sua testa.";
 
 					texto_fim = "\t #FINAL: \n\n"
-								"\t Sacrificando toda a sua alma pelo Caçador, onde Aphelios se revolta e mata Veigar, \n"
-								"\t quebrando assim todo feitiço, fazendo Aphelios voltar à realidade em Iônia, porém, sem sua amada Liora.";
+								"\t os dois explodem a base a salvam o mundo";
+								
 
 					fim(texto_base, texto_fim, 2);
 				break;
 
-				// Conversar com Liora e faze-la lembrar - FIM
+				// Escolher Riko para tentar destruir o elemento - FIM
 				case 2:
-					texto_base = "\t Liora, reafirmando sua paixão inabalável por Aphelios, decide protegê-lo ao prender o Caçador, \n"
-								 "\t resultando em seu exército enfraquecido perante Veigar. Contudo, com a coragem de Jax, seu leal amigo, \n"
-							     "\t o Caçador é libertado e triunfa sobre Veigar, desfazendo o feitiço sombrio e restaurando a paz em Iônia, \n"
-								 "\t embora o preço dessa vitória seja a perda irreparável de seu exército, que era como uma família para Liora.";
-
-					texto_fim = "\t Agora, juntos, eles enfrentam o desafio de reconstruir suas vidas com amor e determinação, \n"
-								"\t enquanto Liora relembra a intensidade de sua paixão por Aphelios.";
+					texto_base = "\t Riko falhou ao destruir o elemento com a bomba e explodiu a base.";
+								
+					texto_fim = "\t Com a falha de Riko, a base explode leva Arthir e o general junto \n"
+								"\t os três morrem";
 
 					fim(texto_base, texto_fim, 1);
 				break;
 			}
 		break;	
-		// Deve encontrar o exercito e tentar se infiltrar		
+		// Invadir a base pelos fundos		
 		case 2:
-			texto_base = "\t Aphelios se infiltra na guerra lutando contra vários\n"
-						 "\t soldados de Veigar por vários dias até encontrar Liora. ";
+			texto_base = "\t Conseguem invadir a base sem chamar atenção dos guardas \n"
+						 "\t tomaram seu rumo em direção a sala principal se deparam com soldados protegendo a sala.";
 
-			opcoes = "\t #Qual atitude ele deverá adotar ao se aproximar de Liora? \n"
-					 "\t 1. Se infiltrar na guerra e matar Veigar diretamente.\n"
-					 "\t 2. Se infiltrar na guerra para conversar com Liora.";
+			opcoes = "\t #O que os dois devem fazer? \n"
+					 "\t 1.Escolher em tentar usar a lâmina para se transportarem dentro da sala principal.\n"
+					 "\t 2. Escolher enfrentar os soldados da sala principal.";
 
 			switch (decisao(texto_base, opcoes)) {
-				// Infiltrar na guerra e matar Veigar diretamente - FIM
+				// Escolher em tentar usar a lâmina para se transportarem dentro da sala principal - FIM
 				case 1:
-					texto_base = "\t Aphelios não consegue matar veigar sozinho, o exército do reino alterativo captura o caçador e o prende no calabouço.";
+					texto_base = "\t Arthit conseguiu usar a lâmina para abrir o portal acessaram facilmente. \n"
+                                 "\t a sala principal e roubaram o elemento Oganus.";
 					
-					texto_fim = "\t Liora não consegue salvar Aphelios devido não ter conhecido ele.";
+					texto_fim = "\t deixaram a base com uma bomba relógio e explodiram o lugar, missão foi um sucesso.";
 
 					fim(texto_base, texto_fim, 0);
 				break;
 
-				// Infiltrar na guerra para conversar com Liora - FIM
+				// Escolher enfrentar os soldados da sala principal - FIM
 				case 2:
-					texto_base = "\t Aphelios se infiltra no exército de Liora e tenta manter contato com a guerreira, porém, \n"
-								 "\t Veigar percebe que o Caçador está¡ tentando explicar algo para Liora e \n"
-								 "\t manda rapidamente seu exército capturar o caçador e matá-lo."; 
-								
-					texto_fim = "\t Aphelios não consegue se proteger, e falece.";
+					texto_base = "\t Começaram a travar uma batalha com os soldados mas por descuido um dos soldados atingiu Riko \n"
+								 "\t a fazendo cair, Arthit tenta ajudar mas os soldados aproveitaram a situação e atingem o mesmo.";
+								 
+					texto_fim = "\t Arthit e Riko morrem e a missão fracassa.";
 
 					fim(texto_base, texto_fim, 0);
 				break;
 			}
 		break;
 
-		// Deve procurar seu antigo amigo para ajudá-lo a achar Liora
+		// Se infiltrar entre os demais
 		case 3:		
-			texto_base = "\t Aphelios acha um orbe da amizade no meio do mundo alternativo, fazendo-o encontrar Jax, \n"
-						 "\t um velho amigo de anos. Porém, ele acaba indo parar um terceiro mundo alternativo em que \n"
-						 "\t Liora foi enfeitiçada por Veigar para ser sua amada esposa.";
+			texto_base = "\t Os dois se infiltram na base como soldados, mas por descuido os soldados perceberam \n"
+						 "\t perceberam que um deles não falava o idioma da nação, os dois foram pegos e levados \n"
+						 "\t até o general Berkesus ficando de frente a frente com o mesmo.";
 			
-			opcoes = "\t #Que decisão ele deve tomar? \n"
-					 "\t 1. Aphelios deve usar o orbe para conseguir fazer mais amizades e matar Veigar. \n"
-					 "\t 2. Aphelios deve seguir sua vida e não fazer nada nesse mundo alternativo.";
+			opcoes = "\t #Que decisão eles devem escolher? \n"
+					 "\t 1.Escolher que Riko consiga se soltar dos soldados e atacar diretamente o general. \n"
+                     "\t enquanto Arthit tenta entrar na sala principal. \n"
+					 "\t 2. Escolher que Arthit consiga escapar dos soldados e enfrente o general \n"
+                     "\t  com sua lâmina enquanto Riko invade a sala principal.";
 
 			switch (decisao(texto_base, opcoes)) {
 				
-				// Usar orbe de amizade e matar Veigar - FIM
+				// Escolher que Riko consiga se soltar - FIM
 				case 1:
 					
-					texto_base = "\t Aphelios consegue montar um grupo com vários amigos de Jax em comum, com outros \n"
-								 "\t poderes como assassinos, tanques e magos, Veigar é contestado e morto. ";
+					texto_base = "\t Riko enfrenta o general mas Berkesus pega a sua espada de mármore \n"
+								 "\t mármore e perfura a barriga de Riko, Arthit prestes a invadir a sala \n"
+                                 "\t principal mas é pego por trás.";
 								 
-					texto_fim = "\t Após a morte de Veigar, Liora é desencantada e todas as suas vidas voltam ao mundo normal em Iônia, \n"
-								"\t fazendo com que a conciliação de Aphelios e sua amada Liora ocorra novamente.";
+					texto_fim = "\t o general também mata Arthit, ele e Riko estão mortos.";
+								
 								
 					fim(texto_base, texto_fim, 1);
 				break;
 
-				// Seguir sua vida e não fazer nada - FIM
+				// Escolher que Arthit consiga escapar - FIM
 				case 2:
-					texto_base = "\t Com isso, Aphelios percebe que a sua nova vida é mais caótica sem Liora, \n"
-								 "\t e esbarra com ela em algum bar se divertindo com seus amigos, \n "
-								 "\t Aphelios tenta conversar com Liora, porém, ela se assusta. \n"
-								 "\t Liora há muito tempo sentia um vazio e ao conhecer Aphelios novamente, \n"
-								 "\t sente seu vazio preenchido."; 
+					texto_base = "\t enfrenta o general conseguindo estabilizar a espada de Berkesus \n"
+								 "\t com sua lâmina estática conseguindo cortar a cabeça do general \n "
+								 "\t onde Arthit usa sua lâmina usando sua energia para que o \n"
+								 "\t Oganus exploda em pouco tempo.";
 								 
-					texto_fim = "\t Juntos, caçam e matam Veigar com suas espadas que quebram os feitiços feitos \n"
-								"\t pelo Mago maligno. Fazendo assim, ter paz no reino alternativo.";
+								 
+					texto_fim = "\t Assim ele e Riko fogem da base antes de explodir e salvam o mundo";
 								
 					fim(texto_base, texto_fim, 1);
 				break;
@@ -302,133 +304,6 @@ void pedir_carona_com_piloto() {
 		break;
 	};
 };
-
-int historia() {
-	// Aguarda 2 segundos e limpa
-	system("cls");
-	
-	espaco();
-	imprimir("\t\t Iniciando a historia...");
-	
-	sleep(1);
-
-	char* texto_base;
-	char* opcoes;
-	char* texto_fim;
-	
-	texto_base = "\t Em uma certa manhã no Reino de Iônia... \n\n"
-				 "\t Aphelios se encontra cansado da sua rotina exaustiva, e faz o seguinte desejo em voz alta \n"
-				 "\t longe da sua casa 'Quero que tu voltes a ser como era antes, tenho sentido falta de como \n"
-				 "\t tu eras no passado!' para si. Após esse desabafo, Veigar, um destemido Mago que vagava por Iônia, \n"
-				 "\t ouve Aphelios e diz para o Caçador: Ora, eu posso ajudar você com isso, meu jovem rapaz \n"
-				 "\t oferecendo um acordo para sua vida voltar a ser vibrante como antes.";
-                         
-    opcoes = "\t #Aphelios então deve:\n"
-			 "\t 1. Aceitar o pacto \n"
-			 "\t 2. Recusar o pacto";
-                   
-                   
-    // Inicio
-	switch (decisao(texto_base, opcoes)) {
-
-		// Aceitar Pacto
-		case 1:		
-			aceitar_pacto();
-		break;
-		
-		// Recusa Pacto
-		case 2: 
-			texto_base = "\t Ao recusar o Pacto, Aphelios se sente perdido e então pensa no seu relacionamento com Liora.";
-			
-			opcoes = "\t #O que ele deverá fazer? \n"
-					 "\t 1. Terminar com Liora. \n"
-					 "\t 2. Não terminar com Liora.";
-					 
-			switch (decisao(texto_base, opcoes)) {
-				// Terminar com Liora
-				case 1:
-					texto_base = "\t Aphelios segue em frente com a sua vida...";
-
-					opcoes = "\t #Qual passo Aphelios deve dar? \n"
-							 "\t 1. Retomar a vida de caçador. \n"
-							 "\t 2. Virar ajudante do Reino de Iônia.";
-							 
-					switch (decisao(texto_base, opcoes)) {
-						// Retomar vida de caçador - FIM
-						case 1:
-							texto_base = "\t Aphelios se torna um dos maiores caçadores novamente, voltando à estaca zero de sua vida, \n"
-										 "\t a procura de novos lares e buscando vagar por outros reinos.";
-										 
-							texto_fim = "\t Veigar deixa Aphelios em paz, fazendo-o criar todo o amargo no coração por levar \n"
-										"\t uma vida sozinho, onde esse ódio se transforma em poderes de caça para os reinos que explora.";
-							
-							fim(texto_base, texto_fim, 1);
-						break;
-							
-						// Virar ajudante do Reino de Iônia - FIM
-						case 2:
-							texto_base = "\t Aphelios em seu passado sempre foi conhecido como um dos maiores caçadores do Reino, \n"
-										 "\t capaz de combater inimigos como em Targus, cidade que faz fronteira com a muralha do Reino.";
-										 
-							texto_fim = "\t Com a proposta da corte, Aphelios volta a ter apoio do Reino para \n"
-										"\t ter a sua vida de Caçador de volta, ganhando mais poder e experiência.";
-							
-							fim(texto_base, texto_fim, 1);
-						break;
-					}
-				break;
-					
-				// Não terminar com Liora
-				case 2:
-					// Aceita o pacto
-					
-					texto_base = "\t Veigar se sente ameaçado por Aphelios porque o caçador não escolheu aceitar \n"
-								 "\t o pacto, fazendo com que Liora corra perigo em Iônia, onde o mago joga um feitiço \n"
-								 "\t na camponesa e acaba raptando-a. Com isso, dias após a procura de Aphelios pelo reino, \n"
-								 "\t Veigar aparece fazendo novamente a proposta ao caçador, \n"
-								 "\t e ele aceita sem pensar duas vezes, na chance de recuperar sua amada!";
-					
-					char* opcao = "\n\n\t\t\t  Deseja Continuar? \n"
-						    	  "\t\t -   'C'   para continuar \n"
-						    	  "\t\t -   'Q'   para retornar ao início... \n\n"
-						    	  "\t\t Sua Escolha: ";
-		    
-					char escolha;
-							   
-				    while (1) {
-				    	system("cls");
-				    	// Imprimir texto e opções
-						espaco();
-						imprimir(texto_base);
-						imprimir(opcao);
-				    	
-				        scanf(" %c", &escolha);
-				
-				        if (escolha == 'c' || escolha == 'C') {
-				            // Continuar história
-				            aceitar_pacto();
-				            break;
-				            
-				        } else if (escolha == 'q' || escolha == 'q') {
-							iniciar();
-				            break; // Sai do loop
-				            
-				        } else {
-				        	espaco();
-				            printf("\t\t\t Opção inválida. Tente novamente.\n");
-				        }
-				    }
-					
-					
-					
-					if( continuar(texto_base) == 1) {
-						aceitar_pacto();	
-					}
-				break;
-			}
-		break;
-	}
-}
 
 int contexto() {
 	char* descricao = "\t Você está prestes a entrar em uma aventura perigosa. \n"
