@@ -30,7 +30,6 @@ narrar("no caminho um piloto humilde os oferece carona, aceite!")
     print("1 - Aceitar")
     
 
-
 escolha = int(input("Escolha (1): "))
 
 
@@ -98,10 +97,6 @@ def final_2():
     print("explodiu a base junto com Arthit e o general, os três morrem.")
     fim()
 
-def fim():
-    print("\n--- FIM DE JOGO ---")
-    exit()
-
 def batalha_escolha_2():
     print("\nConseguem invadir a base sem chamar atenção dos guardas")
     print("tomaram seu rumo em direção a sala principal se deparam com soldados protegendo a sala")
@@ -129,10 +124,6 @@ def final_2():
     print("Arthit tenta a resgatar mas os soldados conseguem atirar nele")
     print("os dois morre, missão fracassada!")
     fim()
-
-def fim():
-    print("\n--- FIM DE JOGO ---")
-    exit()
 
 def batalha_escolha_3():
     print("\nOs dois se infiltram na base como soldado.")
@@ -166,10 +157,6 @@ def final_2():
     print("consegue usar a energia de sua arma contra o elemento")
     print("os dois fogem da base antes do elemento explodir o lugar.")
     fim() 
-
-def fim():
-    print("\n--- FIM DE JOGO ---")
-    exit()
 
 inicio()
 
