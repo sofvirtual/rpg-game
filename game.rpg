@@ -2,34 +2,80 @@ import random
 import time
 
 class Personagem:
-def __init__(self, nome, ataque):
-self.nome = Arthit
-self.ataque = Lâmina estática
+    def __init__(self, nome, ataque):
+        self.nome = Arthit
+        self.ataque = Lâmina estática
 
 class Personagem:
-def __init__(self, nome,ataque):
-self.nome = Riko
-self.ataque = Armas cibernéticas
+   def __init__(self, nome,ataque):
+       self.nome = Riko
+       self.ataque = Armas cibernéticas
 
 
-arthit = Personagem("Arthit", 13, 22, 8)
-riko = Personagem("Riko", 40, 14, 9)
+arthit = Personagem("Arthit")
+riko = Personagem("Riko")
 
-berkesus = Personagem("General Berkesus", 50, 15, 7)
+narrar
 
-narrar("No ano 2198, a cidade de Aeropersus tenta se reerguer das cinzas...")
-narrar("Arthit, filho de engenheiros cibernéticos, empunha a Lâmina Estática, capaz de cortar qualquer coisa.")
-narrar("Riko, filha de um alquimista morto pelo General Berkesus, une-se a ele em busca de vingança.")
-narrar("Juntos, partem em direção à fortaleza do general, para destruir o elemento Oganus.")
+def inicio():
+    print("Arthit e Riko começam sua jornada atravessando o deserto com um bússola azul ao oeste...")
+    print("Eles precisam encontrar um meio de chegar até a base do General Berkesus.")
+    print("\n1 - Pedir para que o piloto os leve até a base")
 
-while True:
-narrar("Arthit e Riko precisam ir até a base é um piloto os oferece ajuda?")
-escolha = input("[1] Aceitar ")
-if escolha == "1":
-if not batalha(arthit, Personagem("escolhe aceitar", 13, 22, 8)):
-exit()
-else:
-narrar("Escolha inválida.")
 
-narrar(
+escolha = int(input("Escolha (1): "))
 
+
+match escolha:
+    case 1:
+        piloto()
+    case 2:
+        inválido()
+    case _:
+        print("Escolha inválida. Missão falhou.")
+
+
+def piloto():
+    print("O piloto aceita e leva vocês até a base!")
+    portao()
+
+
+def portao():
+    print("\nRiko e Arthit se deparam com  soldados fazendo guarda no portão")
+    print("Precisam achar uma estrátegia de como invadir a base.")
+    print("\n1 - Enfrentar os soldados do portão")
+    print("2 - Invadir a base pelos fundos")
+    print("3 - Se infiltrar entre os demais")
+
+
+escolha = int(input("Escolha (1/2/3): "))
+
+
+match escolha:
+    case 1:
+        print("Riko e Arthit enfrentam os soldados do portão mas isso alerta os outros soldados o que os fazem travar uma batalha com um número maior.")
+    case 2:
+        print("Conseguem invadir a base sem chamar atenção dos guardas.")
+    case 3:
+        print("Os dois se infiltram na base como soldados.")
+    case _:
+        print("Escolha inválida. A missão falhou.")
+
+def batalha_escolha_1():
+    print("\n os dois ficam enfraquecidos ao chegar na sala principal 
+    print("terão que fazer uma escolha para executar sua missão")
+    print("\n1 -Escolher que Arthit usa sua lâmina para destruir o elemento oganus e Riko tenta matar o General com suas armas. ")
+    print("2 - Escolher que Riko tenta destruir o elemento Oganus com uma bomba rélogio e Arthit tenta matar o general com sua lâmina. ")
+
+
+
+escolha = int(input("Escolha (1/2): "))
+
+
+match escolha:
+    case 1:
+        print("Arthit destruiu o elemento com a lâmina e Riko conseguiu matar o general com um tiro perfeito em sua testa, os dois explodem a base e salvam o mundo. ")
+    case 2:
+        print(" falhou ao destruir o elemento com a bomba e explodiu a base junto com Arthit e o general, os três morrem. ")
+    case _:
+        print("Escolha inválida.")
