@@ -38,10 +38,10 @@ def inicio():
             piloto()
         case 2:
             narrar("Vocês recusaram a carona e morreram de exaustão no deserto...")
-            fim()
+            return
         case _:
             print("Escolha inválida. Missão falhou.")
-            fim()
+            return
 
 def piloto():
     print("O piloto aceita e leva vocês até a base!")
@@ -65,7 +65,7 @@ def portao():
             batalha_escolha_3()
         case _:
             print("Escolha inválida. A missão falhou.")
-            fim()
+            return
 
 def batalha_escolha_1():
     print("\nOs dois ficam enfraquecidos ao chegar na sala principal.")
@@ -82,7 +82,7 @@ def batalha_escolha_1():
             final_2()
         case _:
             print("Escolha inválida.")
-            fim()
+            return
 
 def batalha_escolha_2():
     print("\nConseguem invadir a base sem chamar atenção dos guardas.")
@@ -95,13 +95,13 @@ def batalha_escolha_2():
     match escolha:
         case 1:
             print("Arthit abriu um portal com a lâmina e vocês roubaram o elemento Oganus, deixando uma bomba relógio para explodir a base.")
-            fim()
+            return
         case 2:
             print("Durante a batalha, Riko foi atingida. Arthit tentou salvá-la, mas os dois foram mortos pelos soldados.")
-            fim()
+            return
         case _:
             print("Escolha inválida.")
-            fim()
+            return
 
 def batalha_escolha_3():
     print("\nOs dois se infiltram na base como soldados.")
@@ -115,28 +115,30 @@ def batalha_escolha_3():
     match escolha:
         case 1:
             print("Riko é derrotada pelo general. Arthit é capturado logo depois. Os dois morrem.")
-            fim()
+            return
         case 2:
             print("Arthit derrota o general com sua lâmina, enquanto Riko pega o elemento Oganus. Eles fogem antes da explosão.")
-            fim()
+            return
         case _:
             print("Escolha inválida.")
-            fim()
+            return
 
 def final_1():
     print("\nArthit destruiu o elemento com a lâmina.")
     print("Riko conseguiu matar o general com um tiro perfeito.")
     print("Os dois explodem a base e salvam o mundo!")
-    fim()
+    return
 
 def final_2():
     print("\nRiko falhou ao destruir o elemento com a bomba.")
     print("A base explodiu junto com Arthit, Riko e o general.")
-    fim()
+    return
 
-def fim():
+while True:
+    inicio()
     print("\n--- FIM DE JOGO ---")
-    exit()
-
-inicio()
+    replay = input("Deseja jogar novamente? (s/n): ").lower()
+    if replay != "s":
+        print("Obrigado por jogar! Até a próxima.")
+        break
 
